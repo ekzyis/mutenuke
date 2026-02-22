@@ -23,7 +23,7 @@ window.addEventListener('DOMContentLoaded', () => {
             .querySelectorAll('div[class*="comment_collapsed"]')
             .forEach(node => {
                 if (node.textContent.startsWith('reply from someone you muted')) {
-                    node.remove();
+                    node.style = 'display: none';
                 }
             }
         )

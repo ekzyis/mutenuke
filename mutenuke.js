@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         mutenuke
 // @namespace    https://github.com/ekzyis
-// @version      1.0
+// @version      1.1
 // @description  Never see 'reply from someone you muted' on Stacker News again
 // @author       ekzyis
 // @match        https://stacker.news/*
@@ -15,7 +15,7 @@ function mutenuke() {
         .querySelectorAll('div[class*="comment_collapsed"]')
         .forEach(node => {
             if (node.textContent.startsWith('reply from someone you muted')) {
-                node.remove();
+                node.style = 'display: none';
             }
         }
     )
